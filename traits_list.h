@@ -13,8 +13,12 @@ class TraitsList {
         Node<T>* head;
         Operation cmp;
 
-        bool find(T data, Node<T> **&pointer) {
-            // TODO
+        bool find(T data, Node<T> **&pointer)
+        {
+            pointer = &head;
+            while(*pointer != nullptr && !cmp(data, (*pointer)->data))
+                pointer = &((*pointer)->next);
+            return *pointer != nullptr && (*pointer)->data == data;
         }
               
     public:
