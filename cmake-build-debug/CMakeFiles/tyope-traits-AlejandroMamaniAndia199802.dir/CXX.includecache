@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/main.cpp
+iostream
+-
+test/tester.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.h
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/mock/mocker.h
+random
+-
+type_traits
+-
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/node.h
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.cpp
+tester.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.h
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.h
+stdexcept
+-
+iostream
+-
+assert.h
+-
+../mock/mocker.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/mock/mocker.h
+../traits_list.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/traits_list.h
+
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/traits_list.h
+node.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/node.h
+

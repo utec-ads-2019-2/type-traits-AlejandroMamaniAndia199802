@@ -18,7 +18,6 @@ void Node<T>::killSelf() {
     if (next) {
         next->killSelf();
     }
-    
     delete this;
 }
 

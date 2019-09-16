@@ -4,53 +4,77 @@
 #include "node.h"
 
 template <typename Tr>
-class TraitsList {     
-    public:
+class TraitsList
+        {
+        public:
         typedef typename Tr::T T;
         typedef typename Tr::Operation Operation;
-      
+        int nodes;
+
     private:
         Node<T>* head;
         Operation cmp;
-
         bool find(T data, Node<T> **&pointer)
         {
             pointer = &head;
             while(*pointer != nullptr && !cmp(data, (*pointer)->data))
+            {
                 pointer = &((*pointer)->next);
+            }
             return *pointer != nullptr && (*pointer)->data == data;
         }
-              
+
     public:
-        TraitsList() : head(nullptr) {};
-             
-        bool insert(T data) {
-            // TODO
-        }
-             
-        bool remove(T data) {
-            // TODO
-        }  
+        TraitsList() : head(nullptr), nodes(0) {};
 
-        bool find(T data) {
-            // TODO
+        bool insert(T data)
+        {
+            Node<T> *new_node = new Node<T>(data);
+            Node<T> **temp_node;
+            if (find(data, temp_node)) return false;
+
+            new_node->next = *temp_node;
+            *temp_node = new_node;
+            ++nodes;
+            return true;
         }
 
-        T operator [] (int index) {
-            // TODO
+        bool remove(T data)
+        {
+            Node<T> **tempNode;
+            if (!find(data, tempNode)) return false;
+
+            Node<T> *newNode = *tempNode;
+            *tempNode = (*tempNode)->next;
+            --nodes;
+            delete newNode;
+            return true;
         }
-             
+
+        bool find(T data)
+        {
+            Node<T> **temp;
+            return find(data, temp);
+        }
+    T operator[](int index) {
+        Node<T> *tempNode = head;
+        for (int i = 0; i < index; i++)
+            tempNode = tempNode->next;
+        return tempNode->data ;
+    }
+
         int size() {
-            // TODO
+            return nodes;
         }
 
-        void print() {
-            // TODO
+        void print()
+        {
+
         }
 
         ~TraitsList() {
-            // TODO
-        }         
+            head->killSelf();
+        }
 };
 
 #endif
