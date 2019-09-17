@@ -17,10 +17,19 @@ class TraitsList
         bool find(T data, Node<T> **&pointer)
         {
             pointer = &head;
-            while(*pointer != nullptr && !cmp(data, (*pointer)->data))
+            for(int i = 0; ((*pointer != nullptr)); i++)
             {
-                pointer = &((*pointer)->next);
+                if(!cmp(data, (*pointer)->data))
+                {
+                    pointer = &((*pointer)->next);
+                }
+                else{
+                    break;
+                }
             }
+
+
+
             return *pointer != nullptr && (*pointer)->data == data;
         }
 

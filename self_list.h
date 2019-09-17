@@ -15,7 +15,8 @@ class SelfList {
 
     public:
         SelfList(Method method) : head(nullptr) {};
-        bool insert(T data) {
+        bool insert(T data)
+        {
             Node<T> *newNode = new Node<T>(data);
             Node<T> **tempNode;
             newNode->next = *tempNode;
@@ -35,7 +36,7 @@ class SelfList {
         }
 
         bool find(T data) {
-            // TODO
+
         }
 
         T operator [] (int index) {
