@@ -57,9 +57,19 @@ private:
                 switch (this->method)
                 {
                     case Move:{
-                        std::swap(this->head->data,(*tempNode)->data);
+                        Node<T> *tempNode_1 = this -> head;
+                        while (*tempNode != nullptr)
+                        {
+                            if((*tempNode)->data == data)
+                            {
+                                *tempNode -> next = this -> head;
+                                next = *tempNode_1;
+                                std::swap(this->head->data,(*tempNode)->data);
+                            }
+                            tempNode = &((*tempNode)->next);
+                            tempNode_1= tempNode_1->next;
+                        }
                         break;
-                        // TO DO
                     }
                     case Count:{
                         *tempNode -> counter++;
@@ -106,14 +116,15 @@ private:
         }
 
         ~SelfList() {
-            head = nullptr;
-            this->next = nullptr;
-            nodes = 0;
-            if(nodes != 0)
+            if(nodes !=0)
             {
-                head->killSelf();
-                nodes = 0;
+
+                this->head->killSelf();
+                this->head = nullptr;
+                this->tail = nullptr;
+                this->nodes = 0;
             }
+
         }  
 };
 
