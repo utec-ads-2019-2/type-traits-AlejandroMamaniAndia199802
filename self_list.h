@@ -12,6 +12,22 @@ class SelfList {
     protected:
         Node<T>* head;
         Method method;
+private:
+    bool find(T data, Node<T> **&pointer)
+    {
+        pointer = &head;
+        for(int i = 0; ((*pointer != nullptr)); i++)
+        {
+            if(!cmp(data, (*pointer)->data))
+            {
+                pointer = &((*pointer)->next);
+            }
+            else{
+                break;
+            }
+        }
+        return *pointer != nullptr && (*pointer)->data == data;
+    }
 
     public:
         SelfList(Method method) : head(nullptr) {};
@@ -36,7 +52,12 @@ class SelfList {
         }
 
         bool find(T data) {
+            switch (this->method)
+            {
+                case Move:{
 
+                }
+            }
         }
 
         T operator [] (int index) {
@@ -56,7 +77,7 @@ class SelfList {
         }
 
         ~SelfList() {
-            // TODO
+            head->killSelf();
         }  
 };
 

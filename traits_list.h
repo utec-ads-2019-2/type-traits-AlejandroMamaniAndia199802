@@ -27,9 +27,6 @@ class TraitsList
                     break;
                 }
             }
-
-
-
             return *pointer != nullptr && (*pointer)->data == data;
         }
 
@@ -41,7 +38,6 @@ class TraitsList
             Node<T> *new_node = new Node<T>(data);
             Node<T> **temp_node;
             if (find(data, temp_node)) return false;
-
             new_node->next = *temp_node;
             *temp_node = new_node;
             ++nodes;
@@ -52,7 +48,6 @@ class TraitsList
         {
             Node<T> **tempNode;
             if (!find(data, tempNode)) return false;
-
             Node<T> *newNode = *tempNode;
             *tempNode = (*tempNode)->next;
             --nodes;
