@@ -62,12 +62,12 @@ private:
                         {
                             if((*tempNode)->data == data)
                             {
-                                *tempNode -> next = this -> head;
-                                next = *tempNode_1;
+                                (*tempNode)->data-> next = this -> head;
+                                this ->next = tempNode_1 -> next;
                                 std::swap(this->head->data,(*tempNode)->data);
                             }
                             tempNode = &((*tempNode)->next);
-                            tempNode_1= tempNode_1->next;
+                            tempNode_1= *tempNode;
                         }
                         break;
                     }
