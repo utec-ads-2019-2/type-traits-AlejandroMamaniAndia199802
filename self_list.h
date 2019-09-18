@@ -15,20 +15,16 @@ class SelfList {
         Method method;
         int nodes;
 private:
-    bool find(T data, Node<T> **&pointer)
+    bool verify(T data, Node<T> **&pointer)
     {
         pointer = &head;
         for(int i = 0; ((*pointer != nullptr)); i++)
         {
-            if(!cmp(data, (*pointer)->data))
-            {
-                pointer = &((*pointer)->next);
+            if ((*pointer)->data == data){
+                return true;
             }
-            else{
-                break;
-            }
+            pointer = &((*pointer)->next);
         }
-        return *pointer != nullptr && (*pointer)->data == data;
     }
 
     public:
@@ -37,9 +33,10 @@ private:
         {
             Node<T> *newNode = new Node<T>(data);
             Node<T> **tempNode;
+            if (find(data, tempNode)) return false;
             newNode->next = *tempNode;
             *tempNode = newNode;
-            ++this -> nodes;
+            ++nodes;
             return true;
         }
 
@@ -48,24 +45,36 @@ private:
             if (!find(data, tempNode)) return false;
             Node<T> *newNode = *tempNode;
             *tempNode = (*tempNode)->next;
-            --this->nodes;
+            --nodes;
             delete newNode;
             return true;
         }
-
         void find(T data) {
             Node<T> **tempNode;
             tempNode = &(this->head);
-            if(find(data,tempNode))
+            if(verify(data,tempNode))
             {
                 switch (this->method)
                 {
                     case Move:{
-                        if(*tempNode != this->head) std::swap(this->head->data,(*tempNode)->data);
+                        std::swap(this->head->data,(*tempNode)->data);
                         break;
+                        // TO DO
                     }
                     case Count:{
+                        *tempNode -> counter++;
+                        Node<T> *tempNode_1 = this->head;
+                        while(*tempNode != nullptr)
+                        {
+                            if(  tempNode_1->counter <=  (*tempNode)->counter)
+                            {
 
+                                std::swap(tempNode_1->counter, (*tempNode)->counter);
+                                std::swap(tempNode_1->data, (*tempNode)->data);
+                            }
+                                tempNode_1= tempNode_1->next;
+                        }
+                        break;
                     }
                     case Transpose:{
                         Node<T> *tempNode_1 = this-> head;
@@ -88,7 +97,7 @@ private:
         }
              
         int size() {
-            return this->nodes;
+            return nodes;
         }
 
         void print()
@@ -97,7 +106,14 @@ private:
         }
 
         ~SelfList() {
-            head->killSelf();
+            head = nullptr;
+            this->next = nullptr;
+            nodes = 0;
+            if(nodes != 0)
+            {
+                head->killSelf();
+                nodes = 0;
+            }
         }  
 };
 

@@ -4,6 +4,7 @@
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../mock/mocker.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../node.h
+CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../self_list.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../test/tester.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/main.cpp.obj: ../traits_list.h
 
@@ -12,6 +13,7 @@ CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/mock/mocker.cpp.obj: ../m
 
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../mock/mocker.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../node.h
+CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../self_list.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../test/tester.cpp
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../test/tester.h
 CMakeFiles/tyope-traits-AlejandroMamaniAndia199802.dir/test/tester.cpp.obj: ../traits_list.h

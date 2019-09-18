@@ -20,6 +20,12 @@ type_traits
 
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/node.h
 
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/self_list.h
+node.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/node.h
+iostream
+-
+
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.cpp
 tester.h
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/test/tester.h
@@ -35,6 +41,8 @@ assert.h
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/mock/mocker.h
 ../traits_list.h
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/traits_list.h
+../self_list.h
+C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/self_list.h
 
 C:/Users/albin/Desktop/Documents/GitHub/ALGORITMOS/ACTIVIDADES_CLASE/type-traits-AlejandroMamaniAndia199802/traits_list.h
 node.h

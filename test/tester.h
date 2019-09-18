@@ -7,7 +7,7 @@
 
 #include "../mock/mocker.h"
 #include "../traits_list.h"
-//#include "../self_list.h"
+#include "../self_list.h"
 
 using namespace std;
 
