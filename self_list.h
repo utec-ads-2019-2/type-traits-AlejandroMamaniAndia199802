@@ -11,7 +11,9 @@ class SelfList {
 
     protected:
         Node<T>* head;
+        Node<T>* tail;
         Method method;
+        int nodes;
 private:
     bool find(T data, Node<T> **&pointer)
     {
@@ -30,7 +32,7 @@ private:
     }
 
     public:
-        SelfList(Method method) : head(nullptr) {};
+        explicit SelfList(Method method) : head(nullptr),tail(nullptr),method(method),nodes(0) {};
         bool insert(T data)
         {
             Node<T> *newNode = new Node<T>(data);
@@ -51,11 +53,29 @@ private:
             return true;
         }
 
-        bool find(T data) {
-            switch (this->method)
+        void find(T data) {
+            Node<T> **tempNode;
+            tempNode = &(this->head);
+            if(find(data,tempNode))
             {
-                case Move:{
+                switch (this->method)
+                {
+                    case Move:{
+                        if(*tempNode != this->head) std::swap(this->head->data,(*tempNode)->data);
+                        break;
+                    }
+                    case Count:{
 
+                    }
+                    case Transpose:{
+                        Node<T> *tempNode_1 = this-> head;
+                        for(int i = 0;(tempNode_1->next) != *tempNode; i++)
+                        {
+                            tempNode_1 = tempNode_1 -> next;
+                        }
+                        std::swap(tempNode_1->data, (*tempNode)->data);
+                        break;
+                    }
                 }
             }
         }
