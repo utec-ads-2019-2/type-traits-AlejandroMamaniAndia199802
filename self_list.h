@@ -57,6 +57,7 @@ private:
                 switch (this->method)
                 {
                     case Move:{
+                        // Con verify ya tendrías todo lo necesario para mover al frente
                         Node<T> *tempNode_1 = this -> head;
                         while (*tempNode != nullptr)
                         {
