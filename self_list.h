@@ -33,6 +33,7 @@ private:
         {
             Node<T> *newNode = new Node<T>(data);
             Node<T> **tempNode;
+            // Esto lo has copiado de traits? Find no tiene esos parámetros aquí
             if (find(data, tempNode)) return false;
             newNode->next = *tempNode;
             *tempNode = newNode;
@@ -42,6 +43,7 @@ private:
 
         bool remove(T data) {
             Node<T> **tempNode;
+            // Esto lo has copiado de traits? Find no tiene esos parámetros aquí
             if (!find(data, tempNode)) return false;
             Node<T> *newNode = *tempNode;
             *tempNode = (*tempNode)->next;
@@ -63,6 +65,7 @@ private:
                         {
                             if((*tempNode)->data == data)
                             {
+                                // data->next? Si data es un tipo T
                                 (*tempNode)->data-> next = this -> head;
                                 this ->next = tempNode_1 -> next;
                                 std::swap(this->head->data,(*tempNode)->data);
@@ -73,6 +76,7 @@ private:
                         break;
                     }
                     case Count:{
+                        // De dónde sacaste el atributo counter?
                         *tempNode -> counter++;
                         Node<T> *tempNode_1 = this->head;
                         while(*tempNode != nullptr)
